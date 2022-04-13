@@ -2,7 +2,6 @@ package com.leodev0.workshopmongo.config;
 
 import com.leodev0.workshopmongo.domain.User;
 import com.leodev0.workshopmongo.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
