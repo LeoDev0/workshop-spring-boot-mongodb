@@ -5,6 +5,7 @@ import com.leodev0.workshopmongo.repository.PostRepository;
 import com.leodev0.workshopmongo.services.exception.ObjectNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,5 +23,9 @@ public class PostService {
             throw new ObjectNotFoundException("Post of id " + id + " not found");
         }
         return post.get();
+    }
+
+    public List<Post> findByTitle(String text) {
+        return postRepository.findByTitleContainingIgnoreCase(text);
     }
 }
